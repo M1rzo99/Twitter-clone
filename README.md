@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Building a Twitter Clone with Next.js React.js TypeScript MongoDB and Node.js</h1>
 
-<p align="center"><img src="https://media.graphassets.com/5n5X81rASgiMbk1w8woh" alt="project-image"></p>
+
 
 <p id="description">🚀 Dive into the world of modern web development with our latest project - a Twitter Clone! 🐦 In this exciting video we walk you through the technology stack we used to bring this social media platform to life.</p>
 
