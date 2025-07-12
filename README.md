@@ -6,9 +6,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://x.sammi.ac/](https://x.sammi.ac/)
 
-  
   
 <h2>🧐 Features</h2>
 
@@ -24,9 +22,7 @@ Here're some of the project's best features:
 
 <p>1. Cloning the repository</p>
 
-```
-https://github.com/samarbadriddin0v/twitter-clone
-```
+
 
 <p>2. Install packages</p>
 
