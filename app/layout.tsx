@@ -6,23 +6,22 @@ import { Provider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://x.sammi.ac'),
 	title: 'Twitter X',
-	description: 'Twitter X is a Twitter clone built by Sammi.ac',
-	authors: [{ name: 'Samar Badriddinov', url: 'https://x.sammi.ac' }],
+	description: 'Twitter X is a Twitter clone built by En',
+	authors: [{ name: 'En', url: '' }],
 	 icons: { icon: "/images/x.svg" },
 	openGraph: {
 		title: 'Twitter X',
-		description: "Twitter X is a Twitter clone built by Sammi.ac",
+		description: "Twitter X is a Twitter clone built by En",
 		type: 'website',
-		url: 'https://x.sammi.ac',
+		url: 'https://www.instagram.com/',
 		locale: 'uz_UZ',
 		images: 'https://media.graphassets.com/3XlUA3OBSjaQcMNFYnVv',
 		countryName: 'Uzbekistan',
-		siteName: 'Sammi',
-		emails: 'info@sammi.ac',
+		siteName: 'En',
+		emails: 'accaunoff99@gmail.com',
 	},
-	keywords: "Twitter, Twitter web, twitter clone, twitter web application, Ilon, Ilon Mask, samar badriddinov"
+	keywords: "Twitter, Twitter web, twitter clone, twitter web application, Ilon, Ilon Mask, En"
 }
 
 export default function RootLayout({

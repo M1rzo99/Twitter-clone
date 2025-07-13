@@ -14,7 +14,7 @@ import { Loader2 } from 'lucide-react'
 import FollowUser from '../shared/follow-user'
 import useAction from '@/hooks/use-action'
 import { follow, getFollowUser, unfollow } from '@/actions/user.action'
-import { useSession } from 'next-auth/react'
+
 
 const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
 	const { isLoading, setIsLoading, onError } = useAction()
@@ -106,16 +106,16 @@ const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
 					)}
 				</div>
 
-				<div className='mt-8 px-4'>
+				<div className='px-4 mt-8'>
 					<div className='flex flex-col'>
-						<p className='text-white text-2xl font-semibold'>{user.name}</p>
+						<p className='text-2xl font-semibold text-white'>{user.name}</p>
 					</div>
 
 					<p className='text-md text-neutral-500'>{user.username ? `@${user.username}` : user.email}</p>
 
 					<div className='flex flex-col mt-4'>
 						<p className='text-white'>{user.bio}</p>
-						<div className='flex gap-4 items-center'>
+						<div className='flex items-center gap-4'>
 							{user.location && (
 								<div className='flex flex-row items-center gap-2 mt-4 text-sky-500'>
 									<IoLocationSharp size={24} />
@@ -128,13 +128,13 @@ const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
 							</div>
 						</div>
 
-						<div className='flex flex-row items-center mt-6 gap-6'>
-							<div className='flex flex-row items-center gap-1 hover:underline cursor-pointer' onClick={openFollowModal}>
+						<div className='flex flex-row items-center gap-6 mt-6'>
+							<div className='flex flex-row items-center gap-1 cursor-pointer hover:underline' onClick={openFollowModal}>
 								<p className='text-white'>{user.following}</p>
 								<p className='text-neutral-500'>Following</p>
 							</div>
 
-							<div className='flex flex-row items-center gap-1 hover:underline cursor-pointer' onClick={openFollowModal}>
+							<div className='flex flex-row items-center gap-1 cursor-pointer hover:underline' onClick={openFollowModal}>
 								<p className='text-white'>{user.followers}</p>
 								<p className='text-neutral-500'>Followers</p>
 							</div>
@@ -149,7 +149,7 @@ const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
 				onClose={() => setOpen(false)}
 				body={
 					<>
-						<div className='flex flex-row w-full py-3 px-4'>
+						<div className='flex flex-row w-full px-4 py-3'>
 							<div
 								className={cn(
 									'w-[50%] h-full flex justify-center items-center cursor-pointer font-semibold',
@@ -173,19 +173,19 @@ const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
 						</div>
 
 						{isFetching ? (
-							<div className='flex justify-center items-center h-24'>
+							<div className='flex items-center justify-center h-24'>
 								<Loader2 className='animate-spin text-sky-500' />
 							</div>
 						) : (
 							<div className='flex flex-col space-y-4'>
 								{state === 'following' ? (
 									following.length === 0 ? (
-										<div className='text-neutral-600 text-center p-6 text-xl'>No following</div>
+										<div className='p-6 text-xl text-center text-neutral-600'>No following</div>
 									) : (
 										following.map(user => <FollowUser key={user._id} user={user} setFollowing={setFollowing} />)
 									)
 								) : followers.length === 0 ? (
-									<div className='text-neutral-600 text-center p-6 text-xl'>No followers</div>
+									<div className='p-6 text-xl text-center text-neutral-600'>No followers</div>
 								) : (
 									followers.map(user => <FollowUser key={user._id} user={user} setFollowing={setFollowing} />)
 								)}

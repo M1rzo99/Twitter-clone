@@ -27,21 +27,21 @@ export default function Auth() {
 		<>
 			<RegisterModal />
 			<LoginModal />
-			<div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center h-screen'>
-				<Image src={'/images/x.svg'} alt='X' width={450} height={450} className='justify-self-center hidden md:block' />
+			<div className='grid items-center h-screen grid-cols-1 gap-10 md:grid-cols-2'>
+				<Image src={'/images/x.svg'} alt='X' width={450} height={450} className='hidden justify-self-center md:block' />
 
 				<div className='flex flex-col justify-center md:justify-between gap-6 h-full md:h-[70vh]'>
 					<div className='block md:hidden'>
 						<Image src={'/images/x.svg'} alt='X' width={50} height={50} />
 					</div>
-					<h1 className='text-6xl font-bold'>Happening now</h1>
+					<h1 className='text-6xl font-bold'>Happening now guyzz</h1>
 					<div className='w-full md:w-[60%]'>
-						<h2 className='font-bold text-3xl mb-4'>Join today.</h2>
+						<h2 className='mb-4 text-3xl font-bold'>Join us</h2>
 						<div className='flex flex-col space-y-2'>
 							<Button
 								onClick={() => signIn('google')}
 								label={
-									<div className='flex gap-2 items-center justify-center'>
+									<div className='flex items-center justify-center gap-2'>
 										<FcGoogle />
 										Sign up with Google
 									</div>
@@ -52,7 +52,7 @@ export default function Auth() {
 							<Button
 								onClick={() => signIn('github')}
 								label={
-									<div className='flex gap-2 items-center justify-center'>
+									<div className='flex items-center justify-center gap-2'>
 										<AiFillGithub />
 										Sign up with Github
 									</div>
@@ -61,9 +61,9 @@ export default function Auth() {
 								secondary
 							/>
 							<div className='flex items-center justify-center'>
-								<div className='h-px bg-gray-700 w-1/2' />
+								<div className='w-1/2 h-px bg-gray-700' />
 								<p className='mx-4'>or</p>
-								<div className='h-px bg-gray-700 w-1/2' />
+								<div className='w-1/2 h-px bg-gray-700' />
 							</div>
 							<Button label={'Create account'} fullWidth onClick={onOpenRegisterModal} />
 							<div className='text-[10px] text-gray-400'>
@@ -74,7 +74,7 @@ export default function Auth() {
 						</div>
 					</div>
 					<div className='w-full md:w-[60%]'>
-						<h3 className='font-medium text-xl mb-4'>Already have an account?</h3>
+						<h3 className='mb-4 text-xl font-medium'>Already have an account?</h3>
 						<Button label={'Sign in'} fullWidth outline onClick={onOpenLoginModal} />
 					</div>
 				</div>
